@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 124026716}
   - component: {fileID: 124026715}
   - component: {fileID: 124026718}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 127491185}
   - component: {fileID: 127491184}
   - component: {fileID: 127491187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 158207463}
   - component: {fileID: 158207462}
   - component: {fileID: 158207465}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 165279476}
   - component: {fileID: 165279475}
   - component: {fileID: 165279478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 171208235}
   - component: {fileID: 171208236}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wheel Front Left Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 305223652}
   - component: {fileID: 305223653}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wheel Rear Left Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -699,7 +699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 370205721}
   - component: {fileID: 370205722}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wheel Rear Right Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +760,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 393238309}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CenterOfMass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -794,7 +794,7 @@ GameObject:
   - component: {fileID: 407135795}
   - component: {fileID: 407135794}
   - component: {fileID: 407135797}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +903,7 @@ GameObject:
   - component: {fileID: 422796828}
   - component: {fileID: 422796827}
   - component: {fileID: 422796830}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1012,7 +1012,7 @@ GameObject:
   - component: {fileID: 503281757}
   - component: {fileID: 503281756}
   - component: {fileID: 503281759}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1121,7 +1121,7 @@ GameObject:
   - component: {fileID: 505490200}
   - component: {fileID: 505490199}
   - component: {fileID: 505490202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1230,7 +1230,7 @@ GameObject:
   - component: {fileID: 515947886}
   - component: {fileID: 515947885}
   - component: {fileID: 515947888}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1345,7 +1345,7 @@ GameObject:
   - component: {fileID: 595187585}
   - component: {fileID: 595187584}
   - component: {fileID: 595187587}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1474,7 +1474,7 @@ GameObject:
   - component: {fileID: 649360149}
   - component: {fileID: 649360148}
   - component: {fileID: 649360151}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1580,7 +1580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 674518253}
   - component: {fileID: 674518254}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CarCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1720,7 +1720,7 @@ GameObject:
   - component: {fileID: 767128581}
   - component: {fileID: 767128580}
   - component: {fileID: 767128583}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1829,7 +1829,7 @@ GameObject:
   - component: {fileID: 777193949}
   - component: {fileID: 777193948}
   - component: {fileID: 777193951}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1935,7 +1935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 777828109}
   - component: {fileID: 777828110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CheckPointGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2104,6 +2104,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: f3e43493eba664e488f4448504712940, type: 2}
+    - target: {fileID: -4968196284255407975, guid: 57394e4cb954ee547a23a13e6de97461,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -3689841525767655354, guid: 57394e4cb954ee547a23a13e6de97461,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2114,6 +2119,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 2e288e8ff0730994eab9a8769f1faf68, type: 2}
+    - target: {fileID: -2660139963538978837, guid: 57394e4cb954ee547a23a13e6de97461,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -1528408756880705634, guid: 57394e4cb954ee547a23a13e6de97461,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -841544401760038775, guid: 57394e4cb954ee547a23a13e6de97461,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2128,6 +2143,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 57394e4cb954ee547a23a13e6de97461,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983208274672031898, guid: 57394e4cb954ee547a23a13e6de97461,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6731901095783405189, guid: 57394e4cb954ee547a23a13e6de97461,
         type: 3}
@@ -2208,6 +2233,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carController: {fileID: 810030346}
+--- !u!114 &810030348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810030343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e646ebde484614c42b0c676ea5d1b361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carController: {fileID: 0}
+  net:
+    layers: 08000000080000000800000002000000
+  fitness: 0
+  distanceTraveled: 0
+  inputs: []
+  nextCheckpoint: {fileID: 0}
+  nextCheckpointDist: 0
+  mapFeedbackRenderer: {fileID: 0}
+  firstMat: {fileID: 0}
+  Default: {fileID: 0}
+  mutated: {fileID: 0}
+  rb: {fileID: 0}
+  rayRange: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &926651492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,7 +2275,7 @@ GameObject:
   - component: {fileID: 926651495}
   - component: {fileID: 926651494}
   - component: {fileID: 926651497}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2330,7 +2384,7 @@ GameObject:
   - component: {fileID: 931080401}
   - component: {fileID: 931080400}
   - component: {fileID: 931080403}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2540,7 +2594,7 @@ GameObject:
   - component: {fileID: 1024445840}
   - component: {fileID: 1024445839}
   - component: {fileID: 1024445842}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2649,7 +2703,7 @@ GameObject:
   - component: {fileID: 1048096302}
   - component: {fileID: 1048096301}
   - component: {fileID: 1048096304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2758,7 +2812,7 @@ GameObject:
   - component: {fileID: 1063110730}
   - component: {fileID: 1063110729}
   - component: {fileID: 1063110732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2867,7 +2921,7 @@ GameObject:
   - component: {fileID: 1127044222}
   - component: {fileID: 1127044221}
   - component: {fileID: 1127044224}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3037,7 +3091,7 @@ GameObject:
   - component: {fileID: 1274359274}
   - component: {fileID: 1274359273}
   - component: {fileID: 1274359276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3146,7 +3200,7 @@ GameObject:
   - component: {fileID: 1282644427}
   - component: {fileID: 1282644426}
   - component: {fileID: 1282644429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3255,7 +3309,7 @@ GameObject:
   - component: {fileID: 1306926284}
   - component: {fileID: 1306926283}
   - component: {fileID: 1306926286}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3364,7 +3418,7 @@ GameObject:
   - component: {fileID: 1323882970}
   - component: {fileID: 1323882969}
   - component: {fileID: 1323882972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3473,7 +3527,7 @@ GameObject:
   - component: {fileID: 1330252074}
   - component: {fileID: 1330252073}
   - component: {fileID: 1330252076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3582,7 +3636,7 @@ GameObject:
   - component: {fileID: 1338187106}
   - component: {fileID: 1338187105}
   - component: {fileID: 1338187108}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3687,6 +3741,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cb47c2371536db64697857dfd4c6b37b,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cb47c2371536db64697857dfd4c6b37b,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 128
       objectReference: {fileID: 0}
@@ -3702,6 +3761,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb47c2371536db64697857dfd4c6b37b,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.4999999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cb47c2371536db64697857dfd4c6b37b,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.50000006
       objectReference: {fileID: 0}
@@ -3714,16 +3778,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.50000006
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb47c2371536db64697857dfd4c6b37b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.4999999
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: cb47c2371536db64697857dfd4c6b37b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb47c2371536db64697857dfd4c6b37b,
         type: 3}
@@ -3765,7 +3819,7 @@ GameObject:
   - component: {fileID: 1509514702}
   - component: {fileID: 1509514701}
   - component: {fileID: 1509514704}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3874,7 +3928,7 @@ GameObject:
   - component: {fileID: 1639524816}
   - component: {fileID: 1639524815}
   - component: {fileID: 1639524818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3983,7 +4037,7 @@ GameObject:
   - component: {fileID: 1764405738}
   - component: {fileID: 1764405737}
   - component: {fileID: 1764405740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4092,7 +4146,7 @@ GameObject:
   - component: {fileID: 1836593180}
   - component: {fileID: 1836593179}
   - component: {fileID: 1836593182}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4207,7 +4261,7 @@ GameObject:
   - component: {fileID: 1913315962}
   - component: {fileID: 1913315961}
   - component: {fileID: 1913315964}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4316,7 +4370,7 @@ GameObject:
   - component: {fileID: 1982850587}
   - component: {fileID: 1982850586}
   - component: {fileID: 1982850589}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4425,7 +4479,7 @@ GameObject:
   - component: {fileID: 2017875950}
   - component: {fileID: 2017875949}
   - component: {fileID: 2017875952}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4531,7 +4585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2071475524}
   - component: {fileID: 2071475525}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wheel Front Right Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4596,7 +4650,7 @@ GameObject:
   - component: {fileID: 2082981389}
   - component: {fileID: 2082981388}
   - component: {fileID: 2082981391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Checkpoint (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

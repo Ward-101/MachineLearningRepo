@@ -25,11 +25,7 @@ public class Scr_Test : MonoBehaviour , IComparable<Scr_Test>
             return -1;
         }
 
-        else
-        {
-            return 0;
-        }
-        
+        return 0;
     }
 
     private void Awake()

@@ -64,4 +64,10 @@ public class Scr_CarController : MonoBehaviour
         wheelFrontLeftCollider.steerAngle = steeringAngle;
         wheelFrontRightCollider.steerAngle = steeringAngle;
     }
+
+    public void ResetInput()
+    {
+        horizontalInput = 0;
+        verticalInput = 0;
+    }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Scr_Checkpoint : MonoBehaviour
 {
+    public Transform nextCheckpoint;
+
     /*
     private void OnTriggerEnter(Collider other)
     {

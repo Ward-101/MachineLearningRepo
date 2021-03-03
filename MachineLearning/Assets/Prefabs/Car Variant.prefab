@@ -453,7 +453,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6894435349341852193}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 258630035901dad4babee0a50a238008, type: 3}
   m_Name: 
@@ -590,6 +590,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: f3e43493eba664e488f4448504712940, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 57394e4cb954ee547a23a13e6de97461,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4968196284255407975, guid: 57394e4cb954ee547a23a13e6de97461,
         type: 3}
       propertyPath: m_Layer
@@ -628,7 +633,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 57394e4cb954ee547a23a13e6de97461,
         type: 3}
       propertyPath: m_Name
-      value: Car Variant
+      value: Car
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 57394e4cb954ee547a23a13e6de97461,
         type: 3}

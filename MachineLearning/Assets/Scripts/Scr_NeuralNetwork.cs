@@ -88,7 +88,7 @@ public class Scr_NeuralNetwork
     {
         neurons[0] = inputs;
 
-        for (int x = 0; x < layers.Length; x++)
+        for (int x = 1; x < layers.Length; x++)
         {
             for (int y = 0; y < layers[x]; y++)
             {

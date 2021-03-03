@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Scr_Manager : MonoBehaviour
 {
@@ -10,8 +11,12 @@ public class Scr_Manager : MonoBehaviour
 
     public Scr_Agent agentPrefab;
     public Transform agentGroup;
+    private int currentGeneration = 0;
+    public Text currentGenText;
+    public Text currentTrainDurationText;
+    public InputField trainingDurationField;
 
-    Scr_Agent agent;
+    private Scr_Agent agent;
     List<Scr_Agent> agents = new List<Scr_Agent>();
 
     public Scr_CameraController cameraController;
@@ -24,6 +29,7 @@ public class Scr_Manager : MonoBehaviour
     private IEnumerator InitCoroutine()
     {
         NewGenation();
+        InitNeuralNetworkViewer();
         Focus();
 
         yield return new WaitForSeconds(trainingDuration);
@@ -37,6 +43,8 @@ public class Scr_Manager : MonoBehaviour
         Focus();
 
         yield return new WaitForSeconds(trainingDuration);
+
+        StartCoroutine(LoopCoroutine());
     }
 
     private void NewGenation()
@@ -50,6 +58,8 @@ public class Scr_Manager : MonoBehaviour
         ResetAgents();
 
         SetColors();
+
+        SetUIText();
     }
 
     private void AddOrRemoveAgent()
@@ -92,7 +102,8 @@ public class Scr_Manager : MonoBehaviour
 
     private void Focus()
     {
-        //pour mercredi
+        NeuralNetworkViewer.instance.agent = agents[0];
+        NeuralNetworkViewer.instance.RefreshAxon();
 
         cameraController.target = (agents[0].transform);
     }
@@ -139,6 +150,52 @@ public class Scr_Manager : MonoBehaviour
         }
 
         End();
+    }
+
+    public void Save()
+    {
+        List<Scr_NeuralNetwork> nets = new List<Scr_NeuralNetwork>();
+
+        for (int i = 0; i < agents.Count; i++)
+        {
+            nets.Add(agents[i].net);
+        }
+
+        Scr_DataManager.instance.Save(nets);
+    }
+
+    public void Load()
+    {
+        Scr_Data data = Scr_DataManager.instance.Load();
+
+        if (data != null)
+        {
+            for (int i = 0; i < agents.Count; i++)
+            {
+                agents[i].net = data.nets[i];
+            }
+        }
+
+        End();
+    }
+
+    private void InitNeuralNetworkViewer()
+    {
+        NeuralNetworkViewer.instance.Init(agents[0]);
+    }
+
+    private void SetUIText()
+    {
+        currentGeneration++;
+        currentGenText.text = "Generation : " + currentGeneration;
+
+        //if (trainingDurationField.text != null)
+        //{
+        //    trainingDuration = float.Parse(trainingDurationField.text);
+        //    trainingDurationField.text = null;
+        //}
+
+        //currentTrainDurationText.text = "Current Training Duration : " + trainingDuration;
     }
 }
 

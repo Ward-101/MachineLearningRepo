@@ -242,8 +242,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396740207}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.5, z: 0}
-  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 6117617553546840219}
   m_RootOrder: 10
@@ -633,7 +633,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 57394e4cb954ee547a23a13e6de97461,
         type: 3}
       propertyPath: m_Name
-      value: Car
+      value: Car Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 57394e4cb954ee547a23a13e6de97461,
         type: 3}

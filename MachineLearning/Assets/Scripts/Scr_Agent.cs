@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Scr_Agent : MonoBehaviour
+public class Scr_Agent : MonoBehaviour , IComparable<Scr_Agent>
 {
     public float fitness;
     public float distanceTraveled;

@@ -17,6 +17,8 @@ public class Scr_CarController : MonoBehaviour
     public float verticalInput;
     private float steeringAngle;
 
+    public Scr_Checkpoint lastCheckpoint;
+
     private void Start()
     {
         rb.centerOfMass = centerOfMass.localPosition;
@@ -69,5 +71,7 @@ public class Scr_CarController : MonoBehaviour
     {
         horizontalInput = 0;
         verticalInput = 0;
+
+        lastCheckpoint = null;
     }
 }

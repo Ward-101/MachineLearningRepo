@@ -15,6 +15,9 @@ public class Scr_DataManager : MonoBehaviour
     public string loadoutPath;
     XmlSerializer loadoutSerializer = new XmlSerializer(typeof(Scr_LoadoutData));
 
+    public string championPath;
+    public Scr_Data championNet;
+
     private Encoding encoding = Encoding.GetEncoding("UTF-8");
 
     private void Awake()
@@ -75,6 +78,29 @@ public class Scr_DataManager : MonoBehaviour
         return null;
     }
 
+    #region VERSUS MODE
+
+    public void SaveChampion(List<Scr_NeuralNetwork> _net)
+    {
+        StreamWriter championStreamWriter = new StreamWriter(path, false, encoding);
+
+        Scr_Data championData = new Scr_Data { nets = _net };
+        serializer.Serialize(championStreamWriter, championData);
+    }
+
+    public Scr_Data LoadChampion()
+    {
+        if (File.Exists(championPath))
+        {
+            FileStream fileStream = new FileStream(championPath, FileMode.Open);
+
+            return serializer.Deserialize(fileStream) as Scr_Data;
+        }
+
+        return null;
+    }
+
+    #endregion
 
 
 }

@@ -49,11 +49,11 @@ public class Scr_MenuManager : MonoBehaviour
     {
         List<Scr_CustomLoadout> loadouts = new List<Scr_CustomLoadout>();
 
-        for (int i = 0; i < slidersValues.Length; i++)
-        {
-            nets.Add(agents[i].net);
-            loadouts.Add(slidersValues[i])
-        }
+        //for (int i = 0; i < slidersValues.Length; i++)
+        //{
+        //    nets.Add(agents[i].net);
+        //    loadouts.Add(slidersValues[i])
+        //}
 
 
     }

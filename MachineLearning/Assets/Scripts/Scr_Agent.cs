@@ -13,6 +13,7 @@ public class Scr_Agent : MonoBehaviour , IComparable<Scr_Agent>
 
     public Transform nextCheckpoint;
     public float nextCheckpointDist;
+    private float timer;
 
     public float[] inputs;
 
@@ -26,6 +27,7 @@ public class Scr_Agent : MonoBehaviour , IComparable<Scr_Agent>
     public Material firstMat;
     public Material defaultMat;
     public Material mutatedMat;
+    public Material championMat;
 
     public MeshRenderer mapFeedbackRenderer;
 
@@ -33,6 +35,8 @@ public class Scr_Agent : MonoBehaviour , IComparable<Scr_Agent>
     {
         fitness = 0f;
         distanceTraveled = 0f;
+        timer = 0f;
+        tempSpeed = 0f;
 
         transform.position = Vector3.zero;
         transform.rotation = Quaternion.identity;
@@ -50,6 +54,8 @@ public class Scr_Agent : MonoBehaviour , IComparable<Scr_Agent>
 
     public void FixedUpdate()
     {
+        timer += Time.deltaTime;
+
         InputUpdate();
         OutUpdate();
         FitnessUpdate();
@@ -93,22 +99,30 @@ public class Scr_Agent : MonoBehaviour , IComparable<Scr_Agent>
     }
 
     private float tempDistance;
+    private float tempSpeed;
 
     private void FitnessUpdate()
     {
         tempDistance = distanceTraveled + (nextCheckpointDist - (transform.position - nextCheckpoint.position).magnitude);
 
-        if (fitness < tempDistance)
+        if (fitness < tempDistance + tempSpeed)
         {
-            fitness = tempDistance;
+            fitness = tempDistance + tempSpeed;
         }
+
     }
 
     public void CheckpointReached(Transform checkpoint)
     {
+        tempSpeed += (nextCheckpointDist / timer) * 0.8f;
+        timer = 0;
         distanceTraveled += nextCheckpointDist;
         nextCheckpoint = checkpoint;
         nextCheckpointDist = (transform.position - nextCheckpoint.position).magnitude;
+
+        //distanceTraveled += nextCheckpointDist;
+        //nextCheckpoint = checkpoint;
+        //nextCheckpointDist = (transform.position - nextCheckpoint.position).magnitude;
     }
 
     public void SetFirstColor()
@@ -127,6 +141,12 @@ public class Scr_Agent : MonoBehaviour , IComparable<Scr_Agent>
     {
         GetComponent<MeshRenderer>().material = mutatedMat;
         mapFeedbackRenderer.material = mutatedMat;
+    }
+
+    public void SetChampionColor()
+    {
+        GetComponent<MeshRenderer>().material = championMat;
+        mapFeedbackRenderer.material = championMat;
     }
 
     public int CompareTo(Scr_Agent other)

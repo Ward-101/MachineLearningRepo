@@ -15,6 +15,11 @@ public class Scr_Checkpoint : MonoBehaviour
                 other.transform.parent.GetComponent<Scr_Agent>().CheckpointReached(nextCheckpoint);
             }
         }
+
+        if (other.transform.parent.GetComponent<Scr_CarController>())
+        {
+            other.transform.parent.GetComponent<Scr_CarController>().lastCheckpoint = this;
+        }
     }
 
 }

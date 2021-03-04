@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Scr_Agent : MonoBehaviour
+public class Agent : MonoBehaviour, IComparable<Agent>
 {
     public float fitness;
     public float distanceTraveled;
 
-    public Scr_NeuralNetwork net;
-    public Scr_CarController carController;
+    public NeuralNetwork net;
+    public CarController carController;
 
     public Transform nextCheckpoint;
     public float nextCheckpointDist;
@@ -26,6 +26,7 @@ public class Scr_Agent : MonoBehaviour
     public Material firstMat;
     public Material defaultMat;
     public Material mutatedMat;
+    public Material championMat;
 
     public MeshRenderer mapFeedbackRenderer;
 
@@ -44,7 +45,7 @@ public class Scr_Agent : MonoBehaviour
 
         carController.ResetInput();
 
-        nextCheckpoint = Scr_CheckpointManager.instance.firstCheckpoint;
+        nextCheckpoint = CheckpointManager.instance.firstCheckpoint;
         nextCheckpointDist = (transform.position - nextCheckpoint.position).magnitude;
     }
 
@@ -129,7 +130,13 @@ public class Scr_Agent : MonoBehaviour
         mapFeedbackRenderer.material = mutatedMat;
     }
 
-    public int CompareTo(Scr_Agent other)
+    public void SetChampionColor()
+    {
+        GetComponent<MeshRenderer>().material = championMat;
+        mapFeedbackRenderer.material = championMat;
+    }
+
+    public int CompareTo(Agent other)
     {
         if (fitness < other.fitness)
         {

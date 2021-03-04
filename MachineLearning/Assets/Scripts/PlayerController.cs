@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scr_PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    public Scr_CarController carController;
+    public CarController carController;
 
     private void Update()
     {

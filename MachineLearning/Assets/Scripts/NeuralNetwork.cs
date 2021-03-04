@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class Scr_NeuralNetwork
+public class NeuralNetwork
 {
     public int[] layers;
     public float[][] neurons;
@@ -14,11 +14,11 @@ public class Scr_NeuralNetwork
     private int y;
     private int z;
 
-    public Scr_NeuralNetwork()
+    public NeuralNetwork()
     {
     }
 
-    public Scr_NeuralNetwork(int[] _layers)
+    public NeuralNetwork(int[] _layers)
     {
         layers = new int[_layers.Length];
 
@@ -32,11 +32,7 @@ public class Scr_NeuralNetwork
         InitAxons();
     }
 
-    /// <summary>
-    /// Permet de copier un neural network
-    /// </summary>
-    /// <param name="netCopy"></param>
-    public void CopyNet(Scr_NeuralNetwork netCopy)
+    public void CopyNet(NeuralNetwork netCopy)
     {
         for (int x = 0; x < netCopy.axons.Length; x++)
         {
@@ -136,7 +132,6 @@ public class Scr_NeuralNetwork
                     {
                         axons[x][y][z] *= UnityEngine.Random.Range(0f, 1f);
                     }
-
                 }
             }
         }

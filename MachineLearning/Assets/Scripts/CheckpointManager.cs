@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scr_CheckpointManager : MonoBehaviour
+public class CheckpointManager : MonoBehaviour
 {
-    public static Scr_CheckpointManager instance;
+    public static CheckpointManager instance;
 
     public Transform firstCheckpoint;
 
@@ -20,9 +20,9 @@ public class Scr_CheckpointManager : MonoBehaviour
 
         for (int i = 0; i < transform.childCount - 1; i++)
         {
-            transform.GetChild(i).GetComponent<Scr_Checkpoint>().nextCheckpoint = transform.GetChild(i + 1);
+            transform.GetChild(i).GetComponent<Checkpoint>().nextCheckpoint = transform.GetChild(i + 1);
         }
 
-        transform.GetChild(transform.childCount - 1).GetComponent<Scr_Checkpoint>().nextCheckpoint = transform.GetChild(0);
+        transform.GetChild(transform.childCount - 1).GetComponent<Checkpoint>().nextCheckpoint = transform.GetChild(0);
     }
 }

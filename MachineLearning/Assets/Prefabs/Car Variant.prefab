@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 396740208}
   - component: {fileID: 396740210}
   - component: {fileID: 396740209}
-  m_Layer: 10
+  m_Layer: 1
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,8 +242,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396740207}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.5, z: 0}
-  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_LocalPosition: {x: -0, y: 1.94, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children: []
   m_Father: {fileID: 6117617553546840219}
   m_RootOrder: 10
@@ -487,6 +487,7 @@ MonoBehaviour:
   firstMat: {fileID: 2100000, guid: a05d596e2b95c814cb0ec48a380eab9b, type: 2}
   defaultMat: {fileID: 2100000, guid: b7cfa85f4f5729a44aa2342134a6530b, type: 2}
   mutatedMat: {fileID: 2100000, guid: 8c00f52164b2d3b4484b4aee82b1cf0f, type: 2}
+  championMat: {fileID: 2100000, guid: 3aa688d47217d6446988f9ae3233491a, type: 2}
   mapFeedbackRenderer: {fileID: 396740209}
 --- !u!1001 &6011353041472057200
 PrefabInstance:
@@ -577,6 +578,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 57394e4cb954ee547a23a13e6de97461,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 57394e4cb954ee547a23a13e6de97461,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a05d596e2b95c814cb0ec48a380eab9b, type: 2}
@@ -590,11 +596,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: f3e43493eba664e488f4448504712940, type: 2}
-    - target: {fileID: -7511558181221131132, guid: 57394e4cb954ee547a23a13e6de97461,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -4968196284255407975, guid: 57394e4cb954ee547a23a13e6de97461,
         type: 3}
       propertyPath: m_Layer
@@ -633,12 +634,17 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 57394e4cb954ee547a23a13e6de97461,
         type: 3}
       propertyPath: m_Name
-      value: Car
+      value: Car Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 57394e4cb954ee547a23a13e6de97461,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 57394e4cb954ee547a23a13e6de97461,
+        type: 3}
+      propertyPath: m_TagString
+      value: CarIA
       objectReference: {fileID: 0}
     - target: {fileID: 2983208274672031898, guid: 57394e4cb954ee547a23a13e6de97461,
         type: 3}

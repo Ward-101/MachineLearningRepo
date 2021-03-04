@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scr_CarController : MonoBehaviour
+public class CarController : MonoBehaviour
 {
     public float maxStearAngle = 42f;
     public float motorForce = 1000f;

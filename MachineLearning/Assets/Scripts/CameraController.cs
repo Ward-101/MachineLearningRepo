@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scr_CameraController : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     public Transform target;
 
@@ -17,7 +17,7 @@ public class Scr_CameraController : MonoBehaviour
     private void Update()
     {
         wantedPos = target.TransformPoint(cameraLocalPos);
-        wantedPos.y = cameraLocalPos.y;
+        wantedPos.y = cameraLocalPos.y + target.transform.position.y;
 
         transform.position = Vector3.Lerp(transform.position, wantedPos, posLerpSpeed);
 

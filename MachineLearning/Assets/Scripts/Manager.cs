@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
+    public static Manager instance;
+
     public int populationSize = 100;
     public float trainingDuration = 30;
     public float mutation = 5;
@@ -21,6 +23,11 @@ public class Manager : MonoBehaviour
     [HideInInspector]
 
     public bool isVersusModeOn; // ADDED FOR VERSUS MODE //
+
+    public void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -145,6 +152,7 @@ public class Manager : MonoBehaviour
     {
         StopAllCoroutines();
         StartCoroutine(Loop());
+        isVersusModeOn = false;
     }
 
     public void ResetNets()
@@ -193,6 +201,8 @@ public class Manager : MonoBehaviour
 
     public void Versus()
     {
+        isVersusModeOn = true;
+
         StopAllCoroutines();
 
         VersusGeneration();
@@ -214,14 +224,10 @@ public class Manager : MonoBehaviour
 
     private void OnlyChampion()
     {
-        int nbrOfAgents = populationSize;
-
-        if (agents.Count > 1)
+        for (int i = agents.Count - 1; i > 0; i--)
         {
-            for (int i = 1; i < nbrOfAgents; i++)
-            {
-                Destroy(agents[i].transform.gameObject);
-            }
+            Destroy(agents[i].transform.gameObject);
+            agents.RemoveAt(i);
         }
     }
 
@@ -250,8 +256,6 @@ public class Manager : MonoBehaviour
                 agents[i].net = championData.nets[0];
             }
         }
-        
-        isVersusModeOn = true;
 
         Versus();
     }

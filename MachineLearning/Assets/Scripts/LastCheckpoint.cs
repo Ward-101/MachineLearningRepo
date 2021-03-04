@@ -4,23 +4,15 @@ using UnityEngine;
 
 public class LastCheckpoint : MonoBehaviour
 {
-    public bool isVersusModeOn;
-    public Manager _ScriptManager;
-
-    private void Start()
-    {
-        isVersusModeOn = _ScriptManager.isVersusModeOn;
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (isVersusModeOn == true)
+        if (Manager.instance.isVersusModeOn == true)
         {
-            if (other.tag == "CarIA")
+            if (other.transform.parent.GetComponent<Agent>())
             {
                 Debug.Log("You LOSE!");
             }
-            else if (other.tag == "CarPlayer")
+            else
             {
                 Debug.Log("You WIN!");
             }

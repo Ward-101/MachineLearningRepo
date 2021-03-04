@@ -2941,7 +2941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 270.4, y: -23}
+  m_AnchoredPosition: {x: 270.4, y: -26.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &799543511
@@ -3847,7 +3847,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 447.3, y: -23.7}
+  m_AnchoredPosition: {x: 447.3, y: -26.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088171961
@@ -5163,6 +5163,7 @@ GameObject:
   - component: {fileID: 1332762578}
   - component: {fileID: 1332762577}
   - component: {fileID: 1332762576}
+  - component: {fileID: 1332762580}
   m_Layer: 8
   m_Name: Checkpoint (33)
   m_TagString: Untagged
@@ -5259,6 +5260,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332762574}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1332762580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332762574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c306ecb12198f48911dd4e8d6270da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1333652597
 GameObject:
   m_ObjectHideFlags: 0
@@ -5272,7 +5285,6 @@ GameObject:
   - component: {fileID: 1333652601}
   - component: {fileID: 1333652600}
   - component: {fileID: 1333652599}
-  - component: {fileID: 1333652603}
   m_Layer: 8
   m_Name: Checkpoint (0)
   m_TagString: Untagged
@@ -5369,20 +5381,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333652597}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1333652603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1333652597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45c306ecb12198f48911dd4e8d6270da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isVersusModeOn: 0
-  _ScriptManager: {fileID: 1185458517}
 --- !u!1 &1352581195
 GameObject:
   m_ObjectHideFlags: 0
@@ -7952,7 +7950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LoadChad
+  m_text: StartVersus
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

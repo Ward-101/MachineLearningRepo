@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
@@ -37,7 +36,6 @@ public class Scr_MenuManager : MonoBehaviour
 
         driveTypeIndex = driveTypeDropdown.value;
 
-        //Save la Data dans un fichier
 
         Invoke("GoToTrainingScene", 5f);
     }
@@ -46,4 +44,19 @@ public class Scr_MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
+
+    private void SaveLoadout()
+    {
+        List<Scr_CustomLoadout> loadouts = new List<Scr_CustomLoadout>();
+
+        for (int i = 0; i < slidersValues.Length; i++)
+        {
+            nets.Add(agents[i].net);
+            loadouts.Add(slidersValues[i])
+        }
+
+
+    }
+
+
 }

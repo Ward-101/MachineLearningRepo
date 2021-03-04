@@ -8,15 +8,21 @@ using System.Xml.Serialization;
 public class Scr_DataManager : MonoBehaviour
 {
     public static Scr_DataManager instance = null;
-    public string path;
 
+    public string path;
     XmlSerializer serializer = new XmlSerializer(typeof(Scr_Data));
+
+    public string loadoutPath;
+    XmlSerializer loadoutSerializer = new XmlSerializer(typeof(Scr_LoadoutData));
+
     private Encoding encoding = Encoding.GetEncoding("UTF-8");
 
     private void Awake()
     {
         if (instance == null) instance = this;
+
         SetPath();
+        SetLoadoutPath();
     }
 
     public void Save(List<Scr_NeuralNetwork> _nets)
@@ -42,6 +48,31 @@ public class Scr_DataManager : MonoBehaviour
     public void SetPath()
     {
         path = Path.Combine(Application.persistentDataPath, "Data.xml");
+    }
+
+    private void SetLoadoutPath()
+    {
+        loadoutPath = Path.Combine(Application.persistentDataPath, "LoadoutData.xml");
+    }
+
+    public void SaveLoadout(List<Scr_CustomLoadout> _loadouts)
+    {
+        StreamWriter streamWriter = new StreamWriter(loadoutPath, false, encoding);
+        Scr_LoadoutData loadoutData = new Scr_LoadoutData { loadouts = _loadouts };
+
+        loadoutSerializer.Serialize(streamWriter, loadoutData);
+    }
+
+    public Scr_LoadoutData LoadLoadout()
+    {
+        if (File.Exists(loadoutPath))
+        {
+            FileStream fileStream = new FileStream(loadoutPath, FileMode.Open);
+
+            return loadoutSerializer.Deserialize(fileStream) as Scr_LoadoutData;
+        }
+
+        return null;
     }
 
 

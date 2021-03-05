@@ -151,6 +151,7 @@ public class Scr_Manager : MonoBehaviour
     public void End()
     {
         StopAllCoroutines();
+        PlayerReset();
         StartCoroutine(LoopCoroutine());
     }
 
@@ -260,6 +261,8 @@ public class Scr_Manager : MonoBehaviour
 
         VersusColor();
 
+        PlayerReset();
+
         playerCar.SetActive(true);
 
         PlayerLoadLoadout();
@@ -341,6 +344,13 @@ public class Scr_Manager : MonoBehaviour
         }
 
         Versus();
+    }
+
+    public void PlayerReset()
+    {
+        playerCar.transform.position = new Vector3 (0, 0, 0);
+        playerCar.transform.rotation = Quaternion.identity;
+        playerCar.SetActive(false);
     }
 
     #endregion

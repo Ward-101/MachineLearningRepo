@@ -36,6 +36,7 @@ public class Scr_MenuManager : MonoBehaviour
 
         driveTypeIndex = driveTypeDropdown.value;
 
+        SaveLoadout();
 
         Invoke("GoToTrainingScene", 5f);
     }
@@ -47,15 +48,9 @@ public class Scr_MenuManager : MonoBehaviour
 
     private void SaveLoadout()
     {
-        List<Scr_CustomLoadout> loadouts = new List<Scr_CustomLoadout>();
+        Scr_CustomLoadout loadouts = new Scr_CustomLoadout() { slidersValues = slidersValues, carName = carName, driveTypeIndex = driveTypeIndex };
 
-        //for (int i = 0; i < slidersValues.Length; i++)
-        //{
-        //    nets.Add(agents[i].net);
-        //    loadouts.Add(slidersValues[i])
-        //}
-
-
+        Scr_DataManager.instance.SaveLoadout(loadouts);
     }
 
 

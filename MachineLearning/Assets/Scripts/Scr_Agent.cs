@@ -5,6 +5,7 @@ using System;
 
 public class Scr_Agent : MonoBehaviour , IComparable<Scr_Agent>
 {
+    public float agentName;
     public float fitness;
     public float distanceTraveled;
 
@@ -148,6 +149,8 @@ public class Scr_Agent : MonoBehaviour , IComparable<Scr_Agent>
         GetComponent<MeshRenderer>().material = championMat;
         mapFeedbackRenderer.material = championMat;
     }
+
+
 
     public int CompareTo(Scr_Agent other)
     {

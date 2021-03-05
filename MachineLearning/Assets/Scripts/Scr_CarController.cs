@@ -6,6 +6,7 @@ public class Scr_CarController : MonoBehaviour
 {
     public float maxStearAngle = 42f;
     public float motorForce = 1000f;
+    public int driveType = 0;
 
     public WheelCollider wheelFrontLeftCollider, wheelFrontRightCollider, wheelBackLeftCollider, wheelBackRightCollider;
     public Transform wheelFrontLeft, wheelFrontRight, wheelBackLeft, wheelBackRight;
@@ -55,8 +56,21 @@ public class Scr_CarController : MonoBehaviour
 
     private void Accelerate()
     {
-        wheelFrontLeftCollider.motorTorque = verticalInput * motorForce;
-        wheelFrontRightCollider.motorTorque = verticalInput * motorForce;
+        if (driveType == 0)
+        {
+            wheelFrontLeftCollider.motorTorque = verticalInput * motorForce;
+        }
+        else if (driveType == 1)
+        {
+            wheelFrontRightCollider.motorTorque = verticalInput * motorForce;
+        }
+        else
+        {
+            wheelFrontLeftCollider.motorTorque = verticalInput * motorForce;
+            wheelFrontRightCollider.motorTorque = verticalInput * motorForce;
+        }
+        
+
     }
 
     private void Steer()

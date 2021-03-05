@@ -67,6 +67,8 @@ public class Scr_Manager : MonoBehaviour
 
         ResetAgents();
 
+        LoadLoadout();
+
         SetColors();
 
         SetUIText();
@@ -189,6 +191,40 @@ public class Scr_Manager : MonoBehaviour
         End();
     }
 
+    public void LoadLoadout()
+    {
+        Scr_LoadoutData loadoutData = Scr_DataManager.instance.LoadLoadout();
+
+        if (loadoutData != null)
+        {
+            for (int i = 0; i < agents.Count; i++)
+            {
+                agents[i].rb.mass = loadoutData.loadout.slidersValues[0];
+                agents[i].carController.motorForce = loadoutData.loadout.slidersValues[1];
+
+                agents[i].carController.wheelFrontRightCollider.mass = loadoutData.loadout.slidersValues[2];
+                agents[i].carController.wheelFrontRightCollider.wheelDampingRate = loadoutData.loadout.slidersValues[3];
+                agents[i].carController.wheelFrontRightCollider.forceAppPointDistance = loadoutData.loadout.slidersValues[4];
+
+                agents[i].carController.wheelFrontLeftCollider.mass = loadoutData.loadout.slidersValues[2];
+                agents[i].carController.wheelFrontLeftCollider.wheelDampingRate = loadoutData.loadout.slidersValues[3];
+                agents[i].carController.wheelFrontLeftCollider.forceAppPointDistance = loadoutData.loadout.slidersValues[4];
+
+                agents[i].carController.wheelBackRightCollider.mass = loadoutData.loadout.slidersValues[2];
+                agents[i].carController.wheelBackRightCollider.wheelDampingRate = loadoutData.loadout.slidersValues[3];
+                agents[i].carController.wheelBackRightCollider.forceAppPointDistance = loadoutData.loadout.slidersValues[4];
+
+                agents[i].carController.wheelBackLeftCollider.mass = loadoutData.loadout.slidersValues[2];
+                agents[i].carController.wheelBackLeftCollider.wheelDampingRate = loadoutData.loadout.slidersValues[3];
+                agents[i].carController.wheelBackLeftCollider.forceAppPointDistance = loadoutData.loadout.slidersValues[4];
+
+                agents[i].carController.driveType = loadoutData.loadout.driveTypeIndex;
+            }
+
+            
+        }
+    }
+
     private void InitNeuralNetworkViewer()
     {
         NeuralNetworkViewer.instance.Init(agents[0]);
@@ -225,6 +261,41 @@ public class Scr_Manager : MonoBehaviour
         VersusColor();
 
         playerCar.SetActive(true);
+
+        PlayerLoadLoadout();
+
+        
+    }
+
+    public void PlayerLoadLoadout()
+    {
+        Scr_LoadoutData loadoutData = Scr_DataManager.instance.LoadLoadout();
+
+        if (loadoutData != null)
+        {
+            playerCar.GetComponent<Rigidbody>().mass = loadoutData.loadout.slidersValues[0];
+            playerCar.GetComponent<Scr_CarController>().motorForce = loadoutData.loadout.slidersValues[1];
+
+            playerCar.transform.GetChild(4).GetComponent<WheelCollider>().mass = loadoutData.loadout.slidersValues[2];
+            playerCar.transform.GetChild(4).GetComponent<WheelCollider>().wheelDampingRate = loadoutData.loadout.slidersValues[3];
+            playerCar.transform.GetChild(4).GetComponent<WheelCollider>().forceAppPointDistance = loadoutData.loadout.slidersValues[4];
+
+            playerCar.transform.GetChild(5).GetComponent<WheelCollider>().mass = loadoutData.loadout.slidersValues[2];
+            playerCar.transform.GetChild(5).GetComponent<WheelCollider>().wheelDampingRate = loadoutData.loadout.slidersValues[3];
+            playerCar.transform.GetChild(5).GetComponent<WheelCollider>().forceAppPointDistance = loadoutData.loadout.slidersValues[4];
+
+            playerCar.transform.GetChild(6).GetComponent<WheelCollider>().mass = loadoutData.loadout.slidersValues[2];
+            playerCar.transform.GetChild(6).GetComponent<WheelCollider>().wheelDampingRate = loadoutData.loadout.slidersValues[3];
+            playerCar.transform.GetChild(6).GetComponent<WheelCollider>().forceAppPointDistance = loadoutData.loadout.slidersValues[4];
+
+            playerCar.transform.GetChild(7).GetComponent<WheelCollider>().mass = loadoutData.loadout.slidersValues[2];
+            playerCar.transform.GetChild(7).GetComponent<WheelCollider>().wheelDampingRate = loadoutData.loadout.slidersValues[3];
+            playerCar.transform.GetChild(7).GetComponent<WheelCollider>().forceAppPointDistance = loadoutData.loadout.slidersValues[4];
+
+            playerCar.GetComponent<Scr_CarController>().driveType = loadoutData.loadout.driveTypeIndex;
+
+
+        }
     }
 
     private void VersusFocus()

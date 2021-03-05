@@ -58,10 +58,10 @@ public class Scr_DataManager : MonoBehaviour
         loadoutPath = Path.Combine(Application.persistentDataPath, "LoadoutData.xml");
     }
 
-    public void SaveLoadout(List<Scr_CustomLoadout> _loadouts)
+    public void SaveLoadout(Scr_CustomLoadout _loadout)
     {
         StreamWriter streamWriter = new StreamWriter(loadoutPath, false, encoding);
-        Scr_LoadoutData loadoutData = new Scr_LoadoutData { loadouts = _loadouts };
+        Scr_LoadoutData loadoutData = new Scr_LoadoutData { loadout = _loadout };
 
         loadoutSerializer.Serialize(streamWriter, loadoutData);
     }
